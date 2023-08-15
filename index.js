@@ -7,6 +7,7 @@ app.get('/name', (req, res) => {
     res.send('ip =   '+ req.headers['x-forwarded-for'])
 })
 app.put("/server/light", function(req, res) {
+    console.log( req.body.id && req.body.value  )
 
 
     if(     req.body.id && req.body.value   ){
