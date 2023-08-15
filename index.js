@@ -10,7 +10,7 @@ app.get('/name', (req, res) => {
 app.put("/server/light", function(req, res) {
 
 
-    if(     req.body['id] && req.body.value   ){
+
         const {id, value} = req.body
         console.log(req.socket.remoteAddress)
 
@@ -29,10 +29,7 @@ app.put("/server/light", function(req, res) {
         fs.writeFileSync("./users.json", JSON.stringify(js));
         res.send('123')
 
-    }
-    else{
-        res.status(400).send("Failed to change")
-    }
+   
 
     
 });
