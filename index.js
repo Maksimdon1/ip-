@@ -5,7 +5,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 
-const cors = require('cors');
 const { time } = require('console');
 
 // Declare app
@@ -20,7 +19,7 @@ const jsonParser = express.json();
 // middlewares
 
 
-app.use(cors());
+
 const filepath = './users.json'
 const app = express()
 app.get('/name', (req, res) => {
