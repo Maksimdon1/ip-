@@ -14,7 +14,7 @@ app.put("/server/light", function(req, res) {
         const {id, value} = req.body
         console.log(req.socket.remoteAddress)
 
-
+ 
 
         let data = fs.readFileSync("./users.json", "utf8");
         let js = JSON.parse(data);
