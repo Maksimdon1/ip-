@@ -6,6 +6,19 @@ app.get('/name', (req, res) => {
     console.log(req.headers['x-forwarded-for'] )
     res.send('ip =   '+ req.headers['x-forwarded-for'])
 })
+
+
+
+
+
+app.get("/user/light", function(req, res) {
+    
+    let data = fs.readFileSync("./users.json", "utf8");
+    let js = JSON.parse(data);
+    res.send(js)
+    
+
+});
 app.put("/server/light", function(req, res) {
     console.log( req.body )
 
