@@ -10,7 +10,7 @@ app.get('/name', (req, res) => {
 app.put("/server/light", function(req, res) {
 
 
-    if(     req.body.id && req.body.value   ){
+    if(     req.body['id] && req.body.value   ){
         const {id, value} = req.body
         console.log(req.socket.remoteAddress)
 
