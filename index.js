@@ -1,4 +1,27 @@
-const express = require('express')
+
+
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const fs = require('fs');
+const morgan = require('morgan');
+const cors = require('cors');
+const { time } = require('console');
+
+// Declare app
+
+
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.raw());
+
+const jsonParser = express.json();
+// middlewares
+
+app.use(morgan('dev'));
+app.use(cors());
+const filepath = './users.json'
 const app = express()
 app.get('/name', (req, res) => {
     console.log("Just got a request!")
