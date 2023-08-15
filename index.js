@@ -15,7 +15,7 @@ app.get("/user/light", function(req, res) {
     
     let data = fs.readFileSync("./users.json", "utf8");
     let js = JSON.parse(data);
-    res.send(js)
+    res.send(js) 
     
 
 });
